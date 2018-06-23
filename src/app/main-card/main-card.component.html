@@ -1,0 +1,27 @@
+<mat-card>
+  <img mat-card-image [src]="(mainImg ? mainImg : defaultImg)"
+                      style="height: 280px">
+  <mat-tab-group *ngIf="places | async  as places;">
+    <mat-tab label="Diving">
+      <mat-card *ngFor="let place of places | placesFilter:types[0]">
+        <img mat-card-avatar [src]="place.img" (click)="getImg($event)">
+        <mat-card-title>Place address</mat-card-title>
+        <mat-card-subtitle>{{ place.address }}</mat-card-subtitle>
+      </mat-card>
+    </mat-tab>
+    <mat-tab label="Walking">
+      <mat-card *ngFor="let place of places | placesFilter:types[1]">
+        <img mat-card-avatar [src]="place.img" (click)="getImg($event)">
+        <mat-card-title>Place address</mat-card-title>
+        <mat-card-subtitle>{{ place.address }}</mat-card-subtitle>
+      </mat-card>
+    </mat-tab>
+    <mat-tab label="Eating">
+      <mat-card *ngFor="let place of places | placesFilter:types[2]">
+        <img mat-card-avatar [src]="place.img" (click)="getImg($event)">
+        <mat-card-title>Place address</mat-card-title>
+        <mat-card-subtitle>{{ place.address }}</mat-card-subtitle>
+      </mat-card>
+    </mat-tab>
+  </mat-tab-group>
+</mat-card>
