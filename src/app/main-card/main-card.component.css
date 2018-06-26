@@ -1,4 +1,11 @@
 mat-card {
   max-width: 500px;
+  border-radius: 5px;
 }
 
+.place img {
+  float: right;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}

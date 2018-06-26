@@ -1,0 +1,26 @@
+mat-card {
+  min-height: 203px;
+  background-color: cornflowerblue;
+  color: white;
+  width: 400px;
+  text-align: center;
+  border-radius: 5px;
+}
+mat-card-content {
+  font-size: xx-large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+mat-icon {
+  width: 2em;
+  height: 2em;
+}
+mat-card-footer {
+  text-align: center;
+  font-size: large;
+}
+h1 {
+  margin-top: 0;
+  margin-left: 0.3em;
+}

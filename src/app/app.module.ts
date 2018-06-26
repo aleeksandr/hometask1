@@ -1,23 +1,29 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {MatCardModule, MatTabsModule} from '@angular/material';
-import {BrowserAnimationsModule, NoopAnimationsModule} from '@angular/platform-browser/animations';
+import {MatCardModule, MatTabsModule, MatIconModule} from '@angular/material';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { MainCardComponent } from './main-card/main-card.component';
 import { PlacesFilterPipe } from './common/places-filter.pipe';
+import { WeatherCardComponent } from './weather-card/weather-card.component';
+import { PhonePipe } from './common/phone.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainCardComponent,
-    PlacesFilterPipe
+    PlacesFilterPipe,
+    WeatherCardComponent,
+    PhonePipe
   ],
   imports: [
     BrowserModule,
     MatCardModule,
-    MatTabsModule
-    , BrowserAnimationsModule
-    // , NoopAnimationsModule
+    MatTabsModule,
+    BrowserAnimationsModule,
+    MatIconModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
