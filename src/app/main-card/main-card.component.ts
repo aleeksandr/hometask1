@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Place, places } from '../info-mock';
-import { MessageService } from '../message.service';
+import { MessageService } from '../common/services/message.service';
 
 @Component({
   selector: 'app-main-card',

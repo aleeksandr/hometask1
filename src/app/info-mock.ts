@@ -32,7 +32,7 @@ export const places: Place[] = [
     'address': 'Sharm Ash Sheikh, Egypt',
     'phone': 20693660559,
     'weather': {'title': 'Sunny', 'water': 27, 'temperature': 38},
-    'social_info': {'title': 'Shark Reef', 'img': '..assets/img/diving-shark-reef-2.jpg', 'followers': 2788, 'following': 345},
+    'social_info': {'title': 'Shark Reef', 'img': '../assets/img/diving-shark-reef-2.jpg', 'followers': 2788, 'following': 345},
     'type': 'diving'
   }, {
     'img': '../assets/img/walking-lake-district.jpg',

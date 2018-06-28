@@ -1,0 +1,30 @@
+mat-card {
+  text-align: center;
+  width: 400px;
+  color: white;
+  background-color: salmon;
+  border-radius: 5px;
+}
+mat-card-footer {
+  border-radius: 0 0 5px 5px;
+}
+img {
+  border: 3px solid white;
+  border-radius: 50%;
+}
+mat-card-footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  color: #272727;
+}
+mat-card > hr {
+  border: 0;
+  height: 1px;
+  background-color: white;
+}
+
+mat-card-footer > div {
+  width: 50%;
+}
+

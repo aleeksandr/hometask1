@@ -1,5 +1,5 @@
-import {Component, DoCheck, OnDestroy, OnInit} from '@angular/core';
-import { MessageService } from '../message.service';
+import {Component, OnDestroy} from '@angular/core';
+import { MessageService } from '../common/services/message.service';
 import {Place} from '../info-mock';
 import { Subscription } from 'rxjs';
 import { MatIconRegistry } from '@angular/material/icon';
