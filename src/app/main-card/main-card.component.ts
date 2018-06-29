@@ -9,7 +9,7 @@ import { MessageService } from '../common/services/message.service';
 })
 export class MainCardComponent {
   public mainImg: string;
-  public defaultImg = '../assets/img/default-img.jpg';
+  public defaultImg = 'assets/img/default-img.jpg';
   constructor(private messageService: MessageService) {}
 
   public places: Place[] = places;
