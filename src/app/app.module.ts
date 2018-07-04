@@ -8,6 +8,9 @@ import { MainCardComponent } from './main-card/main-card.component';
 import { PlacesFilterPipe } from './common/places-filter.pipe';
 import { WeatherCardComponent } from './weather-card/weather-card.component';
 import { PhonePipe } from './common/phone.pipe';
+import { UserFormComponent } from './user-form/user-form.component';
+import {RouterModule} from '@angular/router';
+import {routes} from './routes';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,8 @@ import { PhonePipe } from './common/phone.pipe';
     MainCardComponent,
     PlacesFilterPipe,
     WeatherCardComponent,
-    PhonePipe
+    PhonePipe,
+    UserFormComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +27,8 @@ import { PhonePipe } from './common/phone.pipe';
     MatTabsModule,
     BrowserAnimationsModule,
     MatIconModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
