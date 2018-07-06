@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Place, places } from '../info-mock';
-import { MessageService } from '../message.service';
+import { Place, places } from '../../info-mock';
+import { MessageService } from '../../common/services/message.service';
 
 @Component({
   selector: 'app-main-card',
@@ -9,7 +9,7 @@ import { MessageService } from '../message.service';
 })
 export class MainCardComponent {
   public mainImg: string;
-  public defaultImg = '../assets/img/default-img.jpg';
+  public defaultImg = 'assets/img/default-img.jpg';
   constructor(private messageService: MessageService) {}
 
   public places: Place[] = places;

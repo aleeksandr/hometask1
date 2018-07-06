@@ -1,0 +1,20 @@
+<mat-card>
+  <mat-card-title>{{ place ? place.social_info.title : 'Social info'}}</mat-card-title>
+  <hr>
+  <mat-card-content *ngIf="place; else noInfo">
+    <img mat-card-lg-image [src]="place.social_info.img">
+  </mat-card-content>
+  <ng-template #noInfo>
+    <h2>Please, choose one place from list</h2>
+  </ng-template>
+  <mat-card-footer>
+    <div>
+      <h3>{{ place ? place.social_info.followers : '0' }}</h3>
+      <h4>followers</h4>
+    </div>
+    <div>
+      <h3>{{ place ? place.social_info.following : '0' }}</h3>
+      <h4>following</h4>
+    </div>
+  </mat-card-footer>
+</mat-card>

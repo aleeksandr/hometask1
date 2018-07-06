@@ -1,8 +1,24 @@
-<div class="container">
-  <div class="main">
-    <app-main-card></app-main-card>
-  </div>
-  <div class="weather">
-    <app-weather-card></app-weather-card>
-  </div>
-</div>
+<mat-toolbar color="primary">
+  <span>Homework</span>
+  <span class="example-fill-remaining-space"></span>
+  <mat-menu #appMenu="matMenu">
+    <ng-template matMenuContent>
+      <button mat-menu-item
+              [routerLink]="['places']"
+             routerLinkActive="active"
+      >Places</button>
+      <button mat-menu-item
+              [routerLink]="['signup']"
+              routerLinkActive="active"
+      >Sign Up</button>
+      <button mat-menu-item
+              [routerLink]="['signin']"
+              routerLinkActive="active"
+      >Sign In</button>
+    </ng-template>
+  </mat-menu>
+  <button mat-button [matMenuTriggerFor]="appMenu">Menu</button>
+</mat-toolbar>
+<section>
+  <router-outlet></router-outlet>
+</section>

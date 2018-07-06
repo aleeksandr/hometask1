@@ -1,9 +1,12 @@
-.container {
-  display: flex;
-  margin: auto 5%;
-  justify-content: center;
+section {
+  margin: 2%;
 }
-.weather {
-  /*width: 400px;*/
-  margin-left: 10px;
+button {
+  font-size: large;
+}
+.example-fill-remaining-space {
+   flex: 1 1 auto;
+}
+.active {
+  color: #FF4081;
 }

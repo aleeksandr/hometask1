@@ -1,9 +1,29 @@
 import {Route} from '@angular/router';
-import {UserFormComponent} from './user-form/user-form.component';
+import {PlacesInfoComponent} from './places-info/places-info.component';
+import {places} from './info-mock';
+import {SignUpComponent} from './user-forms/sign-up/sign-up.component';
+import {SignInComponent} from './user-forms/sign-in/sign-in.component';
 
 export const routes: Route [] = [
   {
-    path: 'subscribe',
-    component: UserFormComponent
+    path: '',
+    redirectTo: 'places',
+    pathMatch: 'full'
+  },
+  {
+    path: 'signup',
+    component: SignUpComponent
+  },
+  {
+    path: 'signin',
+    component: SignInComponent
+  },
+  {
+    path: 'places',
+    component: PlacesInfoComponent
+  },
+  {
+    path: '**',
+    redirectTo: 'places'
   }
 ];

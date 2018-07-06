@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Place } from '../info-mock';
+import { Place } from '../../info-mock';
 
 @Pipe({
   name: 'placesFilter'

@@ -1,0 +1,11 @@
+.content {
+  display: flex;
+  margin: auto 5%;
+  justify-content: center;
+}
+.info {
+  margin-left: 10px;
+}
+.social {
+  margin-top: 10px ;
+}

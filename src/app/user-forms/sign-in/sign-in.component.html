@@ -1,0 +1,24 @@
+<mat-card class="col-md-4 col-sm-8 col-md-offset-4 col-sm-offset-2">
+  <mat-card-content>
+    <div class="col-md-12">
+      <form class="form-horizontal" role="form" [formGroup]="signInForm">
+        <div class="form-group text-center bg-danger">
+          <span *ngIf="isAuthorized == false">Password or login is wrong</span>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" formControlName="login" placeholder="Login">
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control" formControlName="password" placeholder="Password">
+        </div>
+        <div class="form-group">
+          <button class="btn btn-block" mat-raised-button color="primary"
+                  [disabled]="!signInForm.valid || isAuthorized === false"
+                  (click)="checkCredentials(signInForm.get('login').value, signInForm.get('password').value)">
+            Subscribe</button>
+        </div>
+      </form>
+    </div>
+  </mat-card-content>
+</mat-card>
+<pre>{{signInForm.get('login').value}} {{ signInForm.get('password').value}} {{isAuthorized}}</pre>

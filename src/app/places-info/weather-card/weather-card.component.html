@@ -2,7 +2,7 @@
   <mat-card-title>{{ place ? place.address : 'Weather'}}</mat-card-title>
   <hr>
   <mat-card-content *ngIf="place; else noWeather">
-    <mat-icon [svgIcon]='place.weather.title.toLowerCase()'></mat-icon>
+    <mat-icon [svgIcon]="place.weather.title.toLowerCase()"></mat-icon>
     <h1>{{ place.weather.temperature }}&#8451;</h1>
   </mat-card-content>
   <ng-template #noWeather>
