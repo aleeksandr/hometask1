@@ -7,7 +7,7 @@ import {SignInComponent} from './user-forms/sign-in/sign-in.component';
 export const routes: Route [] = [
   {
     path: '',
-    redirectTo: 'places',
+    redirectTo: 'signup',
     pathMatch: 'full'
   },
   {
@@ -24,6 +24,6 @@ export const routes: Route [] = [
   },
   {
     path: '**',
-    redirectTo: 'places'
+    redirectTo: 'signup'
   }
 ];

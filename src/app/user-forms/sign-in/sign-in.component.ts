@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-sign-in',
@@ -9,7 +10,7 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 export class SignInComponent implements OnInit {
   public signInForm: FormGroup;
   public isAuthorized: boolean;
-  constructor(private _formBuilder: FormBuilder) {
+  constructor(private _formBuilder: FormBuilder, private router: Router) {
   }
 
   ngOnInit() {
@@ -23,9 +24,11 @@ export class SignInComponent implements OnInit {
     const user = JSON.parse(localStorage.getItem(login));
     if (user) {
       this.isAuthorized = user.password === pass;
+      if (user.password === pass) {
+        this.router.navigate(['/places']);
+      }
     } else {
       this.isAuthorized = false;
     }
-    console.log('check');
   }
 }

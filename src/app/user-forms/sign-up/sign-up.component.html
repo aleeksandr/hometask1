@@ -2,13 +2,17 @@
   <mat-card-content>
     <div class="col-md-12">
       <form class="form-horizontal" role="form" [formGroup]="signUpForm">
-        <div class="form-group">
+        <div class="form-group" [ngClass]="{
+                                  'has-warning': signUpForm.get('email').invalid,
+                                  'has-success': signUpForm.get('email').valid}">
           <input type="email" class="form-control" formControlName="email" placeholder="Email">
         </div>
         <div class="form-group">
           <input type="text" class="form-control" formControlName="name" placeholder="Your name">
         </div>
-        <div class="form-group">
+        <div class="form-group" [ngClass]="{
+                                  'has-warning': signUpForm.get('login').invalid,
+                                  'has-success': signUpForm.get('login').valid}">
           <input type="text" class="form-control" formControlName="login" placeholder="Login">
         </div>
         <div formGroupName="passwordGroup">
@@ -30,6 +34,3 @@
   </mat-card-content>
 </mat-card>
 
-<pre class="col-md-6">{{signUpForm.value | json}}</pre>
-
-<pre class="col-md-6">{{signUpForm.valid}}</pre>

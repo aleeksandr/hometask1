@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, ValidationErrors, Validators} from '@angular/forms';
 import {User} from '../../user';
 import {UserService} from '../../common/services/user.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-sign-up',
@@ -12,7 +13,8 @@ import {UserService} from '../../common/services/user.service';
 export class SignUpComponent implements OnInit {
   public signUpForm: FormGroup;
   constructor(private _formBuilder: FormBuilder,
-              private userService: UserService) { }
+              private userService: UserService,
+              private router: Router) { }
   private passwordValidators = [Validators.required, this._passwordValidator];
   ngOnInit() {
     this.signUpForm = this._formBuilder.group({
@@ -52,5 +54,6 @@ export class SignUpComponent implements OnInit {
   // TODO save users
   public addUser(user: User): void {
     this.userService.addUser(user);
+    this.router.navigate(['/places']);
   }
 }
